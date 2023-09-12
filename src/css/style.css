@@ -1,10 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
+@keyframes logo-pulse {
+  from {
+    height: 65%;
+  }
+  to {
+    height: 75%;
+  }
+}
 * {
   font-family: "Montserrat", sans-serif;
   font-size: 110px;
   margin: 0;
   padding: 0;
   text-align: center;
+}
+*::-moz-selection {
+  background: rgba(255, 255, 255, 0.25);
+}
+*::selection {
+  background: rgba(255, 255, 255, 0.25);
 }
 
 html {
@@ -90,6 +104,17 @@ main div p {
   font-size: 30%;
   font-weight: 300;
   padding: 4px;
+}
+main img {
+  animation: 10s ease-in-out alternate infinite logo-pulse;
+  aspect-ratio: 1;
+  height: 60%;
+  left: 50%;
+  opacity: 0.2;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 #about-us {

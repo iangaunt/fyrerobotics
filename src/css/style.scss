@@ -6,6 +6,11 @@
     align-items: center;
 }
 
+@keyframes logo-pulse {
+    from { height: 65% }
+    to { height: 75% }
+}
+
 $fyre-red: #ec1c24;
 $fyre-orange: #f7941d;
 $grey: #272729;
@@ -20,6 +25,10 @@ $grey-tns: rgb(39 39 41 / 0.8);
     margin: 0;
     padding: 0;
     text-align: center;
+
+    &::selection {
+        background: rgb(255 255 255 / 0.25);
+    }
 }
 
 html {
@@ -106,6 +115,18 @@ main {
             font-weight: 300;
             padding: 4px;
         }
+    }
+
+    img {
+        animation: 10s ease-in-out alternate infinite logo-pulse;
+        aspect-ratio: 1;
+        height: 60%;
+        left: 50%;
+        opacity: 0.2;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
     }
 }
 
