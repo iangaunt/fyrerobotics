@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$fyre-red: #ec1c24;
+$fyre-orange: #f7941d;
+$grey: #272729;
+
+$fyre-red-tns: rgb(236 28 36 / 0.8);
+$fyre-orange-tns: rgb(247 148 29 / 0.8);
+$grey-tns: rgb(39 39 41 / 0.8);
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 110px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#full-header {
+    @include flex;
+    justify-content: flex-start;
+    
+    background: $grey-tns;
+    border: 2px white solid;
+    height: 7.5%;
+    left: 10px;
+    padding: 5px;
+    position: fixed;
+    top: 10px;
+    width: 50%;
+
+    img {
+        aspect-ratio: 1;
+        height: 100%;
+    }
+
+    hr { height: 70%; }
+
+    a {
+        @include flex;
+
+        color: white;
+        font-size: 15%;
+        height: 80%;
+        text-decoration: none;
+        transition: color 0.2s, font-size 0.2s;
+        width: 20%;
+
+        &:hover { 
+            color: $fyre-orange;
+            font-size: 16%; 
+        }
+    }
+
+    #logo { width: 10%; }
+}
+
+main {
+    @include flex;
+
+    background: url("../../public/assets/main_background.png"), linear-gradient($fyre-red 0%, $fyre-orange 100%) fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    height: 100vh;
+    width: 100vw;
+
+    div {
+        @include flex;
+
+        color: white;
+        flex-direction: column;
+        height: 50%;
+        width: 50%;
+
+        h1 {
+            border: 3px white solid;
+            border-top-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+            padding: 20px;
+            line-height: 100px;
+
+            background: -webkit-linear-gradient(#fff, #fff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            font-size: 30%;
+            font-weight: 300;
+            padding: 4px;
+        }
+    }
+}
+
+#about-us {
+    @include flex;
+
+    background-image: url("../../public/assets/svg/checkered_bg.svg");
+    height: 75vh;
+
+    #description, #photos {
+        @include flex;
+        flex-direction: column;
+
+        height: 80%;
+        width: 40%;
+
+        hr {
+            margin: 20px;
+            width: 80%;
+        }
+
+        p { 
+            font-size: 25%; 
+            padding-bottom: 5px;
+            padding-top: 5px;
+        }
+        b { font-size: 100%; }
+    }
+}
