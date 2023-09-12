@@ -1,3 +1,3 @@
-# iangaunt/web-skeleton
+# iangaunt/fyrerobotics.org
 
-A very basic webpage backbone in order to create a simple website using a Sass-TypeScript-ESLint toolchain.
+An updated website for an FRC robotics team for their 2023 - 2024 season.
