@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
 @keyframes logo-pulse {
   from {
@@ -5,6 +6,22 @@
   }
   to {
     height: 75%;
+  }
+}
+@keyframes about-us-img-tilt {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(3deg);
+  }
+}
+@keyframes robot-header-color-pulse {
+  from {
+    background: #ec1c24;
+  }
+  to {
+    background: #f7941d;
   }
 }
 * {
@@ -122,6 +139,7 @@ main img {
   justify-content: center;
   align-items: center;
   background-image: url("../../public/assets/svg/checkered_bg.svg");
+  background-attachment: fixed;
   height: 75vh;
 }
 #about-us #description, #about-us #photos {
@@ -143,4 +161,138 @@ main img {
 }
 #about-us #description b, #about-us #photos b {
   font-size: 100%;
+}
+#about-us #description span, #about-us #photos span {
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 100%;
+  padding: 4px;
+}
+#about-us #description .red, #about-us #photos .red {
+  background: rgba(236, 28, 36, 0.2);
+}
+#about-us #description .orange, #about-us #photos .orange {
+  background: rgba(247, 148, 29, 0.2);
+}
+#about-us #description .grey, #about-us #photos .grey {
+  background: rgba(39, 39, 41, 0.2);
+}
+#about-us #description img, #about-us #photos img {
+  animation: 2s ease-in-out alternate infinite about-us-img-tilt;
+  aspect-ratio: 1;
+  height: 120%;
+}
+
+#robots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+}
+#robots h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: 5s linear alternate infinite robot-header-color-pulse;
+  color: white;
+  font-size: 20%;
+  height: 15%;
+  position: relative;
+  width: 100%;
+}
+#robots h1 img {
+  aspect-ratio: 1;
+  height: 50%;
+}
+#robots h1::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "Previous Robots 🤖";
+  background: linear-gradient(90deg, #272729 0%, transparent 100%);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+#robots #bots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85%;
+  width: 100%;
+}
+#robots #bots-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #272729;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  position: relative;
+  transition: background 0.2s, width 0.2s;
+  border: 0;
+  height: 100%;
+  width: 20%;
+}
+#robots #bots-container a h2, #robots #bots-container a h3, #robots #bots-container a p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  pointer-events: none;
+  transition: opacity 0.2s, width 0.2s;
+}
+#robots #bots-container a h2, #robots #bots-container a h3 {
+  height: 10%;
+}
+#robots #bots-container a h2 {
+  border: 1px white solid;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  font-weight: 500;
+  font-size: 40%;
+  padding: 8px;
+}
+#robots #bots-container a h3 {
+  font-weight: 300;
+  font-size: 20%;
+}
+#robots #bots-container a h3::after {
+  content: "+";
+  color: #f7941d;
+  font-weight: 800;
+}
+#robots #bots-container a p {
+  font-size: 15%;
+  transform: translateY(-50%);
+  top: 50%;
+  opacity: 0;
+  position: absolute;
+  width: 80%;
+}
+#robots #bots-container a:hover {
+  background: #ec1c24;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30%;
+}
+#robots #bots-container a:hover h2, #robots #bots-container a:hover h3 {
+  opacity: 0;
+}
+#robots #bots-container a:hover p {
+  opacity: 1;
+  width: 53.33%;
+}
+#robots #bots-container #aurora {
+  background-image: url("../../public/assets/robots/aurora.png");
+}
+#robots #bots-container #liesma {
+  background-image: url("../../public/assets/robots/liesma.png");
+}
+#robots #bots-container #sol {
+  background-image: url("../../public/assets/robots/sol.png");
 }/*# sourceMappingURL=style.css.map */
