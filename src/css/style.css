@@ -46,7 +46,7 @@ body {
   overflow-x: hidden;
 }
 
-#full-header {
+main .container #full-header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,15 +59,16 @@ body {
   position: fixed;
   top: 10px;
   width: 50%;
+  z-index: 10000;
 }
-#full-header img {
+main .container #full-header img {
   aspect-ratio: 1;
   height: 100%;
 }
-#full-header hr {
+main .container #full-header hr {
   height: 70%;
 }
-#full-header a {
+main .container #full-header a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,15 +79,14 @@ body {
   transition: color 0.2s, font-size 0.2s;
   width: 20%;
 }
-#full-header a:hover {
+main .container #full-header a:hover {
   color: #f7941d;
   font-size: 16%;
 }
-#full-header #logo {
+main .container #full-header #logo {
   width: 10%;
 }
-
-main {
+main .container #title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,7 +97,7 @@ main {
   height: 100vh;
   width: 100vw;
 }
-main div {
+main .container #title div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,7 +106,7 @@ main div {
   height: 50%;
   width: 50%;
 }
-main div h1 {
+main .container #title div h1 {
   border: 3px white solid;
   border-top-right-radius: 30px;
   border-bottom-left-radius: 30px;
@@ -117,12 +117,12 @@ main div h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-main div p {
+main .container #title div p {
   font-size: 30%;
   font-weight: 300;
   padding: 4px;
 }
-main img {
+main .container #title img {
   animation: 10s ease-in-out alternate infinite logo-pulse;
   aspect-ratio: 1;
   height: 60%;
@@ -133,8 +133,7 @@ main img {
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
-
-#about-us {
+main .container #about-us {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,7 +141,7 @@ main img {
   background-attachment: fixed;
   height: 75vh;
 }
-#about-us #description, #about-us #photos {
+main .container #about-us #description, main .container #about-us #photos {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,47 +149,46 @@ main img {
   height: 80%;
   width: 40%;
 }
-#about-us #description hr, #about-us #photos hr {
+main .container #about-us #description hr, main .container #about-us #photos hr {
   margin: 20px;
   width: 80%;
 }
-#about-us #description p, #about-us #photos p {
+main .container #about-us #description p, main .container #about-us #photos p {
   font-size: 25%;
   padding-bottom: 5px;
   padding-top: 5px;
 }
-#about-us #description b, #about-us #photos b {
+main .container #about-us #description b, main .container #about-us #photos b {
   font-size: 100%;
 }
-#about-us #description span, #about-us #photos span {
+main .container #about-us #description span, main .container #about-us #photos span {
   border-bottom-left-radius: 10px;
   border-top-right-radius: 10px;
   font-size: 100%;
   padding: 4px;
 }
-#about-us #description .red, #about-us #photos .red {
+main .container #about-us #description .red, main .container #about-us #photos .red {
   background: rgba(236, 28, 36, 0.2);
 }
-#about-us #description .orange, #about-us #photos .orange {
+main .container #about-us #description .orange, main .container #about-us #photos .orange {
   background: rgba(247, 148, 29, 0.2);
 }
-#about-us #description .grey, #about-us #photos .grey {
+main .container #about-us #description .grey, main .container #about-us #photos .grey {
   background: rgba(39, 39, 41, 0.2);
 }
-#about-us #description img, #about-us #photos img {
+main .container #about-us #description img, main .container #about-us #photos img {
   animation: 2s ease-in-out alternate infinite about-us-img-tilt;
   aspect-ratio: 1;
   height: 120%;
 }
-
-#robots {
+main .container #robots {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 60vh;
 }
-#robots h1 {
+main .container #robots h1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -201,11 +199,11 @@ main img {
   position: relative;
   width: 100%;
 }
-#robots h1 img {
+main .container #robots h1 img {
   aspect-ratio: 1;
   height: 50%;
 }
-#robots h1::before {
+main .container #robots h1::before {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -215,14 +213,14 @@ main img {
   position: absolute;
   width: 100%;
 }
-#robots #bots-container {
+main .container #robots #bots-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 85%;
   width: 100%;
 }
-#robots #bots-container a {
+main .container #robots #bots-container a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -237,7 +235,7 @@ main img {
   height: 100%;
   width: 20%;
 }
-#robots #bots-container a h2, #robots #bots-container a h3, #robots #bots-container a p {
+main .container #robots #bots-container a h2, main .container #robots #bots-container a h3, main .container #robots #bots-container a p {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -245,10 +243,11 @@ main img {
   pointer-events: none;
   transition: opacity 0.2s, width 0.2s;
 }
-#robots #bots-container a h2, #robots #bots-container a h3 {
+main .container #robots #bots-container a h2, main .container #robots #bots-container a h3 {
   height: 10%;
 }
-#robots #bots-container a h2 {
+main .container #robots #bots-container a h2 {
+  background: linear-gradient(80deg, rgba(236, 28, 36, 0.2) 0%, rgba(247, 148, 29, 0.2) 100%);
   border: 1px white solid;
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -256,16 +255,16 @@ main img {
   font-size: 40%;
   padding: 8px;
 }
-#robots #bots-container a h3 {
+main .container #robots #bots-container a h3 {
   font-weight: 300;
   font-size: 20%;
 }
-#robots #bots-container a h3::after {
+main .container #robots #bots-container a h3::after {
   content: "+";
   color: #f7941d;
   font-weight: 800;
 }
-#robots #bots-container a p {
+main .container #robots #bots-container a p {
   font-size: 15%;
   transform: translateY(-50%);
   top: 50%;
@@ -273,26 +272,97 @@ main img {
   position: absolute;
   width: 80%;
 }
-#robots #bots-container a:hover {
+main .container #robots #bots-container a:hover {
   background: #ec1c24;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 30%;
 }
-#robots #bots-container a:hover h2, #robots #bots-container a:hover h3 {
+main .container #robots #bots-container a:hover h2, main .container #robots #bots-container a:hover h3 {
   opacity: 0;
 }
-#robots #bots-container a:hover p {
+main .container #robots #bots-container a:hover p {
   opacity: 1;
   width: 53.33%;
 }
-#robots #bots-container #aurora {
+main .container #robots #bots-container #aurora {
   background-image: url("../../public/assets/robots/aurora.png");
 }
-#robots #bots-container #liesma {
+main .container #robots #bots-container #billy {
+  background-image: url("../../public/assets/robots/billy.png");
+}
+main .container #robots #bots-container #ignis {
+  background-image: url("../../public/assets/robots/ignis.png");
+}
+main .container #robots #bots-container #liesma {
   background-image: url("../../public/assets/robots/liesma.png");
 }
-#robots #bots-container #sol {
+main .container #robots #bots-container #matchbox {
+  background-image: url("../../public/assets/robots/matchbox.png");
+}
+main .container #robots #bots-container #sol {
   background-image: url("../../public/assets/robots/sol.png");
+}
+main .container #contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../public/assets/svg/checkered_bg.svg");
+  background-attachment: fixed;
+  height: 65vh;
+  width: 100vw;
+}
+main .container #contact #join-us, main .container #contact #sponsors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  margin: 5%;
+  width: 40%;
+}
+main .container #contact #join-us h1, main .container #contact #sponsors h1 {
+  color: #ec1c24;
+  font-size: 45%;
+}
+main .container #contact #join-us hr, main .container #contact #sponsors hr {
+  margin: 5%;
+  width: 80%;
+}
+main .container #contact #join-us p, main .container #contact #sponsors p {
+  font-size: 25%;
+}
+main .container #contact #join-us a, main .container #contact #join-us a:visited, main .container #contact #sponsors a, main .container #contact #sponsors a:visited {
+  color: rgb(68, 125, 216);
+  font-size: 100%;
+  text-decoration: none;
+  transition-duration: 0.25s;
+}
+main .container #contact #join-us a:hover, main .container #contact #join-us a:visited:hover, main .container #contact #sponsors a:hover, main .container #contact #sponsors a:visited:hover {
+  color: rgb(166, 122, 242);
+  text-shadow: 0px 0px 10px rgba(166, 122, 242, 0.5);
+}
+main .container #contact #sponsors h1 {
+  color: #f7941d;
+}
+main .container #contact #sponsors h3 {
+  margin: 3%;
+  font-size: 15%;
+}
+main .container #footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #272729;
+  background-position-x: 50%;
+  background-size: cover;
+  background-image: url("../../public/assets/fyre_banner.png");
+  height: 50vh;
+  justify-content: flex-start;
+  width: 100vw;
+}
+main .container #footer #links {
+  height: 100%;
+  width: 30%;
 }/*# sourceMappingURL=style.css.map */
