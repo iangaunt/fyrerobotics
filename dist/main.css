@@ -1,0 +1,376 @@
+/*!*********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/style.css ***!
+  \*********************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap);
+/*!*************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/style.css (1) ***!
+  \*************************************************************************/
+@charset "UTF-8";
+@keyframes logo-pulse {
+  from {
+    height: 65%;
+  }
+  to {
+    height: 75%;
+  }
+}
+@keyframes about-us-img-tilt {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(3deg);
+  }
+}
+@keyframes robot-header-color-pulse {
+  from {
+    background: #ec1c24;
+  }
+  to {
+    background: #f7941d;
+  }
+}
+* {
+  font-family: "Montserrat", sans-serif;
+  font-size: 110px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+*::-moz-selection {
+  background: rgba(255, 255, 255, 0.25);
+}
+*::selection {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main .container #full-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  background: rgba(39, 39, 41, 0.8);
+  border: 2px white solid;
+  height: 7.5%;
+  left: 10px;
+  padding: 5px;
+  position: fixed;
+  top: 10px;
+  width: 50%;
+  z-index: 10000;
+}
+main .container #full-header img {
+  aspect-ratio: 1;
+  height: 100%;
+}
+main .container #full-header hr {
+  height: 70%;
+}
+main .container #full-header a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 15%;
+  height: 80%;
+  text-decoration: none;
+  transition: color 0.2s, font-size 0.2s;
+  width: 20%;
+}
+main .container #full-header a:hover {
+  color: #f7941d;
+  font-size: 16%;
+}
+main .container #full-header #logo {
+  width: 10%;
+}
+main .container #title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(fbd332b685e0ea2f899a.png), linear-gradient(#ec1c24 0%, #f7941d 100%) fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+main .container #title div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  height: 50%;
+  width: 50%;
+}
+main .container #title div h1 {
+  border: 3px white solid;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding: 20px;
+  line-height: 100px;
+  background: -webkit-linear-gradient(#fff, #fff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+main .container #title div p {
+  font-size: 30%;
+  font-weight: 300;
+  padding: 4px;
+}
+main .container #title img {
+  animation: 10s ease-in-out alternate infinite logo-pulse;
+  aspect-ratio: 1;
+  height: 60%;
+  left: 50%;
+  opacity: 0.2;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+main .container #about-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(864b4cf9f539eb219672.svg);
+  background-attachment: fixed;
+  height: 75vh;
+}
+main .container #about-us #description, main .container #about-us #photos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80%;
+  width: 40%;
+}
+main .container #about-us #description hr, main .container #about-us #photos hr {
+  margin: 20px;
+  width: 80%;
+}
+main .container #about-us #description p, main .container #about-us #photos p {
+  font-size: 25%;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+main .container #about-us #description b, main .container #about-us #photos b {
+  font-size: 100%;
+}
+main .container #about-us #description span, main .container #about-us #photos span {
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 100%;
+  padding: 4px;
+}
+main .container #about-us #description .red, main .container #about-us #photos .red {
+  background: rgba(236, 28, 36, 0.2);
+}
+main .container #about-us #description .orange, main .container #about-us #photos .orange {
+  background: rgba(247, 148, 29, 0.2);
+}
+main .container #about-us #description .grey, main .container #about-us #photos .grey {
+  background: rgba(39, 39, 41, 0.2);
+}
+main .container #about-us #description img, main .container #about-us #photos img {
+  animation: 2s ease-in-out alternate infinite about-us-img-tilt;
+  aspect-ratio: 1;
+  height: 120%;
+}
+main .container #robots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+}
+main .container #robots h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: 5s linear alternate infinite robot-header-color-pulse;
+  color: white;
+  font-size: 20%;
+  height: 15%;
+  position: relative;
+  width: 100%;
+}
+main .container #robots h1 img {
+  aspect-ratio: 1;
+  height: 50%;
+}
+main .container #robots h1::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "Previous Robots 🤖";
+  background: linear-gradient(90deg, #272729 0%, transparent 100%);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+main .container #robots #bots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85%;
+  width: 100%;
+}
+main .container #robots #bots-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #272729;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  position: relative;
+  transition: background 0.2s, width 0.2s;
+  border: 0;
+  height: 100%;
+  width: 20%;
+}
+main .container #robots #bots-container a h2, main .container #robots #bots-container a h3, main .container #robots #bots-container a p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  pointer-events: none;
+  transition: opacity 0.2s, width 0.2s;
+}
+main .container #robots #bots-container a h2, main .container #robots #bots-container a h3 {
+  height: 10%;
+}
+main .container #robots #bots-container a h2 {
+  background: linear-gradient(80deg, rgba(236, 28, 36, 0.2) 0%, rgba(247, 148, 29, 0.2) 100%);
+  border: 1px white solid;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  font-weight: 500;
+  font-size: 40%;
+  padding: 8px;
+}
+main .container #robots #bots-container a h3 {
+  font-weight: 300;
+  font-size: 20%;
+}
+main .container #robots #bots-container a h3::after {
+  content: "+";
+  color: #f7941d;
+  font-weight: 800;
+}
+main .container #robots #bots-container a p {
+  font-size: 15%;
+  transform: translateY(-50%);
+  top: 50%;
+  opacity: 0;
+  position: absolute;
+  width: 80%;
+}
+main .container #robots #bots-container a:hover {
+  background: #ec1c24;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30%;
+}
+main .container #robots #bots-container a:hover h2, main .container #robots #bots-container a:hover h3 {
+  opacity: 0;
+}
+main .container #robots #bots-container a:hover p {
+  opacity: 1;
+  width: 53.33%;
+}
+main .container #robots #bots-container #aurora {
+  background-image: url(363b8c66257097ed32b5.png);
+}
+main .container #robots #bots-container #billy {
+  background-image: url(99ad791e0cfa59520f6e.png);
+}
+main .container #robots #bots-container #ignis {
+  background-image: url(134dd1a287b8ecef6082.png);
+}
+main .container #robots #bots-container #liesma {
+  background-image: url(bd328c981133facd100b.png);
+}
+main .container #robots #bots-container #matchbox {
+  background-image: url(71334aca2d7422d0955b.png);
+}
+main .container #robots #bots-container #sol {
+  background-image: url(b4b9750399b4cb944d36.png);
+}
+main .container #contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(864b4cf9f539eb219672.svg);
+  background-attachment: fixed;
+  height: 65vh;
+  width: 100vw;
+}
+main .container #contact #join-us, main .container #contact #sponsors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  margin: 5%;
+  width: 40%;
+}
+main .container #contact #join-us h1, main .container #contact #sponsors h1 {
+  color: #ec1c24;
+  font-size: 45%;
+}
+main .container #contact #join-us hr, main .container #contact #sponsors hr {
+  margin: 5%;
+  width: 80%;
+}
+main .container #contact #join-us p, main .container #contact #sponsors p {
+  font-size: 25%;
+}
+main .container #contact #join-us a, main .container #contact #join-us a:visited, main .container #contact #sponsors a, main .container #contact #sponsors a:visited {
+  color: rgb(68, 125, 216);
+  font-size: 100%;
+  text-decoration: none;
+  transition-duration: 0.25s;
+}
+main .container #contact #join-us a:hover, main .container #contact #join-us a:visited:hover, main .container #contact #sponsors a:hover, main .container #contact #sponsors a:visited:hover {
+  color: rgb(166, 122, 242);
+  text-shadow: 0px 0px 10px rgba(166, 122, 242, 0.5);
+}
+main .container #contact #sponsors h1 {
+  color: #f7941d;
+}
+main .container #contact #sponsors h3 {
+  margin: 3%;
+  font-size: 15%;
+}
+main .container #footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #272729;
+  background-position-x: 50%;
+  background-size: cover;
+  background-image: url(230be2dd877c1e40c770.png);
+  height: 50vh;
+  justify-content: flex-start;
+  width: 100vw;
+}
+main .container #footer #links {
+  height: 100%;
+  width: 30%;
+}/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=main.css.map*/

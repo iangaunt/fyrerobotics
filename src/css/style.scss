@@ -47,249 +47,326 @@ $header-grey: rgb(39 39 41 / 0.8);
 html { scroll-behavior: smooth; }
 body { overflow-x: hidden; }
 
-#full-header {
-    @include flex;
-    justify-content: flex-start;
-    
-    background: $header-grey;
-    border: 2px white solid;
-    height: 7.5%;
-    left: 10px;
-    padding: 5px;
-    position: fixed;
-    top: 10px;
-    width: 50%;
-
-    img {
-        aspect-ratio: 1;
-        height: 100%;
-    }
-
-    hr { height: 70%; }
-
-    a {
+main .container {
+    #full-header {
         @include flex;
-
-        color: white;
-        font-size: 15%;
-        height: 80%;
-        text-decoration: none;
-        transition: color 0.2s, font-size 0.2s;
-        width: 20%;
-
-        &:hover { 
-            color: $fyre-orange;
-            font-size: 16%; 
-        }
-    }
-
-    #logo { width: 10%; }
-}
-
-main {
-    @include flex;
-
-    background: url("../../public/assets/main_background.png"), linear-gradient($fyre-red 0%, $fyre-orange 100%) fixed;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    height: 100vh;
-    width: 100vw;
-
-    div {
-        @include flex;
-
-        color: white;
-        flex-direction: column;
-        height: 50%;
+        justify-content: flex-start;
+        
+        background: $header-grey;
+        border: 2px white solid;
+        height: 7.5%;
+        left: 10px;
+        padding: 5px;
+        position: fixed;
+        top: 10px;
         width: 50%;
-
-        h1 {
-            border: 3px white solid;
-            border-top-right-radius: 30px;
-            border-bottom-left-radius: 30px;
-            padding: 20px;
-            line-height: 100px;
-
-            background: -webkit-linear-gradient(#fff, #fff);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        p {
-            font-size: 30%;
-            font-weight: 300;
-            padding: 4px;
-        }
-    }
-
-    img {
-        animation: 10s ease-in-out alternate infinite logo-pulse;
-        aspect-ratio: 1;
-        height: 60%;
-        left: 50%;
-        opacity: 0.2;
-        pointer-events: none;
-        position: absolute;
-        top: 50%;
-        transform: translateX(-50%) translateY(-50%);
-    }
-}
-
-#about-us {
-    @include flex;
-
-    background-image: url("../../public/assets/svg/checkered_bg.svg");
-    background-attachment: fixed;
-    height: 75vh;
-
-    #description, #photos {
-        @include flex;
-        flex-direction: column;
-
-        height: 80%;
-        width: 40%;
-
-        hr {
-            margin: 20px;
-            width: 80%;
-        }
-
-        p { 
-            font-size: 25%; 
-            padding-bottom: 5px;
-            padding-top: 5px;
-        }
-        b { font-size: 100% }
-
-        span { 
-            border-bottom-left-radius: 10px;
-            border-top-right-radius: 10px;
-            font-size: 100%; 
-            padding: 4px;
-        }
-
-        .red { background: $fyre-red-tns; }
-        .orange { background: $fyre-orange-tns; }
-        .grey { background: $fyre-grey-tns; }
-
-        img {
-            animation: 2s ease-in-out alternate infinite about-us-img-tilt;
-            aspect-ratio: 1;
-            height: 120%;
-        }
-    }
-}
-
-#robots {
-    @include flex;
-    flex-direction: column;
-    height: 60vh;
-
-    h1 {
-        @include flex;
-
-        animation: 5s linear alternate infinite robot-header-color-pulse;
-        color: white;
-        font-size: 20%;
-        height: 15%;
-        position: relative;
-        width: 100%;
+        z-index: 10000;
 
         img {
             aspect-ratio: 1;
-            height: 50%;
-        }
-
-        &::before {
-            @include flex;
-
-            content: 'Previous Robots 🤖';
-            background: linear-gradient(90deg, $grey 0%, transparent 100%);;
             height: 100%;
-            position: absolute;
-            width: 100%;
         }
-    }
 
-    #bots-container {
-        @include flex;
-
-        height: 85%;
-        width: 100%;
+        hr { height: 70%; }
 
         a {
             @include flex;
-            background: $grey;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
 
-            flex-direction: column;
-            position: relative;
-            transition: background 0.2s, width 0.2s;
-    
-            border: 0;
-            height: 100%;
+            color: white;
+            font-size: 15%;
+            height: 80%;
+            text-decoration: none;
+            transition: color 0.2s, font-size 0.2s;
             width: 20%;
-    
-            h2, h3, p {
-                @include flex;
 
-                color: white; 
-                pointer-events: none;
-                transition: opacity 0.2s, width 0.2s;
+            &:hover { 
+                color: $fyre-orange;
+                font-size: 16%; 
+            }
+        }
+
+        #logo { width: 10%; }
+    }
+
+    #title {
+        @include flex;
+
+        background: url("../../public/assets/main_background.png"), linear-gradient($fyre-red 0%, $fyre-orange 100%) fixed;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        height: 100vh;
+        width: 100vw;
+
+        div {
+            @include flex;
+
+            color: white;
+            flex-direction: column;
+            height: 50%;
+            width: 50%;
+
+            h1 {
+                border: 3px white solid;
+                border-top-right-radius: 30px;
+                border-bottom-left-radius: 30px;
+                padding: 20px;
+                line-height: 100px;
+
+                background: -webkit-linear-gradient(#fff, #fff);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
 
-            h2, h3 { height: 10%; }
-            h2 { 
-                border: 1px white solid;
-                border-bottom-left-radius: 15px;
-                border-top-right-radius: 15px;
-                font-weight: 500;
-                font-size: 40%; 
-                padding: 8px;
-            }
-            h3 { 
+            p {
+                font-size: 30%;
                 font-weight: 300;
-                font-size: 20%;
-                
-                &::after {
-                    content: '+';
-                    color: $fyre-orange;
-                    font-weight: 800;
-                }
+                padding: 4px;
             }
+        }
 
-            p { 
-                font-size: 15%;
-                transform: translateY(-50%);
-                top: 50%;
-                opacity: 0;
-                position: absolute;
+        img {
+            animation: 10s ease-in-out alternate infinite logo-pulse;
+            aspect-ratio: 1;
+            height: 60%;
+            left: 50%;
+            opacity: 0.2;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+    }
+
+    #about-us {
+        @include flex;
+
+        background-image: url("../../public/assets/svg/checkered_bg.svg");
+        background-attachment: fixed;
+        height: 75vh;
+
+        #description, #photos {
+            @include flex;
+            flex-direction: column;
+
+            height: 80%;
+            width: 40%;
+
+            hr {
+                margin: 20px;
                 width: 80%;
             }
 
-            &:hover {
-                background: $fyre-red;
+            p { 
+                font-size: 25%; 
+                padding-bottom: 5px;
+                padding-top: 5px;
+            }
+            b { font-size: 100% }
+
+            span { 
+                border-bottom-left-radius: 10px;
+                border-top-right-radius: 10px;
+                font-size: 100%; 
+                padding: 4px;
+            }
+
+            .red { background: $fyre-red-tns; }
+            .orange { background: $fyre-orange-tns; }
+            .grey { background: $fyre-grey-tns; }
+
+            img {
+                animation: 2s ease-in-out alternate infinite about-us-img-tilt;
+                aspect-ratio: 1;
+                height: 120%;
+            }
+        }
+    }
+
+    #robots {
+        @include flex;
+        flex-direction: column;
+        height: 60vh;
+
+        h1 {
+            @include flex;
+
+            animation: 5s linear alternate infinite robot-header-color-pulse;
+            color: white;
+            font-size: 20%;
+            height: 15%;
+            position: relative;
+            width: 100%;
+
+            img {
+                aspect-ratio: 1;
+                height: 50%;
+            }
+
+            &::before {
+                @include flex;
+
+                content: 'Previous Robots 🤖';
+                background: linear-gradient(90deg, $grey 0%, transparent 100%);;
+                height: 100%;
+                position: absolute;
+                width: 100%;
+            }
+        }
+
+        #bots-container {
+            @include flex;
+
+            height: 85%;
+            width: 100%;
+
+            a {
+                @include flex;
+                background: $grey;
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: cover;
 
-                width: 30%;
+                flex-direction: column;
+                position: relative;
+                transition: background 0.2s, width 0.2s;
+        
+                border: 0;
+                height: 100%;
+                width: 20%;
+        
+                h2, h3, p {
+                    @include flex;
 
-                h2, h3 { opacity: 0; }
+                    color: white; 
+                    pointer-events: none;
+                    transition: opacity 0.2s, width 0.2s;
+                }
+
+                h2, h3 { height: 10%; }
+                h2 { 
+                    background: linear-gradient(80deg, $fyre-red-tns 0%, $fyre-orange-tns 100%);
+                    border: 1px white solid;
+                    border-bottom-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                    font-weight: 500;
+                    font-size: 40%; 
+                    padding: 8px;
+                }
+                h3 { 
+                    font-weight: 300;
+                    font-size: 20%;
+                    
+                    &::after {
+                        content: '+';
+                        color: $fyre-orange;
+                        font-weight: 800;
+                    }
+                }
+
                 p { 
-                    opacity: 1; 
-                    width: 53.33%;
+                    font-size: 15%;
+                    transform: translateY(-50%);
+                    top: 50%;
+                    opacity: 0;
+                    position: absolute;
+                    width: 80%;
+                }
+
+                &:hover {
+                    background: $fyre-red;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+
+                    width: 30%;
+
+                    h2, h3 { opacity: 0; }
+                    p { 
+                        opacity: 1; 
+                        width: 53.33%;
+                    }
+                }
+            }
+
+            #aurora { background-image: url("../../public/assets/robots/aurora.png") }
+            #billy { background-image: url("../../public/assets/robots/billy.png") }
+            #ignis { background-image: url("../../public/assets/robots/ignis.png") }
+            #liesma { background-image: url("../../public/assets/robots/liesma.png") }
+            #matchbox { background-image: url("../../public/assets/robots/matchbox.png") }
+            #sol { background-image: url("../../public/assets/robots/sol.png") }
+        }
+    }
+
+    #contact {
+        @include flex;
+
+        background-image: url("../../public/assets/svg/checkered_bg.svg");
+        background-attachment: fixed;
+        height: 65vh;
+        width: 100vw;
+
+        #join-us, #sponsors {
+            @include flex;
+            flex-direction: column;
+
+            height: 100%;
+            margin: 5%;
+            width: 40%;
+
+            h1 {
+                color: $fyre-red;
+                font-size: 45%;
+            }
+
+            hr {
+                margin: 5%;
+                width: 80%;
+            }
+
+            p { font-size: 25%; }
+            a, a:visited { 
+                color: rgb(68, 125, 216);
+                font-size: 100%; 
+                text-decoration: none;
+                transition-duration: 0.25s;
+
+                &:hover {
+                    color: rgb(166, 122, 242);
+                    text-shadow: 0px 0px 10px rgb(166 122 242 / 0.5);
                 }
             }
         }
 
-        #aurora { background-image: url("../../public/assets/robots/aurora.png") }
-        #liesma { background-image: url("../../public/assets/robots/liesma.png") }
-        #sol { background-image: url("../../public/assets/robots/sol.png") }
+        #sponsors {
+            h1 {
+                color: $fyre-orange;
+            }
+
+            h3 {
+                margin: 3%;
+                font-size: 15%;
+            }
+        }
+    }
+
+    #footer {
+        @include flex;
+        
+        background-color: $grey;
+        background-position-x: 50%;
+        background-size: cover;
+
+        background-image: url("../../public/assets/fyre_banner.png");
+        height: 50vh;
+        justify-content: flex-start;
+        width: 100vw;
+
+        #links {
+            height: 100%;
+            width: 30%;
+        }
     }
 }
