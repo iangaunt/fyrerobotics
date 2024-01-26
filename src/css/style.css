@@ -24,6 +24,10 @@
     background: #f7941d;
   }
 }
+body {
+  width: 100%;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
   font-size: 110px;
@@ -46,6 +50,13 @@ body {
   overflow-x: hidden;
 }
 
+main .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+}
 main .container #full-header {
   display: flex;
   justify-content: center;
@@ -58,7 +69,7 @@ main .container #full-header {
   padding: 5px;
   position: fixed;
   top: 10px;
-  width: 50%;
+  width: 600px;
   z-index: 10000;
 }
 main .container #full-header img {
@@ -94,8 +105,9 @@ main .container #title {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow-x: hidden;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 main .container #title div {
   display: flex;
@@ -104,6 +116,7 @@ main .container #title div {
   color: white;
   flex-direction: column;
   height: 50%;
+  white-space: nowrap;
   width: 50%;
 }
 main .container #title div h1 {
@@ -125,7 +138,6 @@ main .container #title div p {
 main .container #title img {
   animation: 10s ease-in-out alternate infinite logo-pulse;
   aspect-ratio: 1;
-  height: 60%;
   left: 50%;
   opacity: 0.2;
   pointer-events: none;
@@ -140,6 +152,9 @@ main .container #about-us {
   background-image: url("../../public/assets/svg/checkered_bg.svg");
   background-attachment: fixed;
   height: 75vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100%;
 }
 main .container #about-us #description, main .container #about-us #photos {
   display: flex;
@@ -179,7 +194,7 @@ main .container #about-us #description .grey, main .container #about-us #photos 
 main .container #about-us #description img, main .container #about-us #photos img {
   animation: 2s ease-in-out alternate infinite about-us-img-tilt;
   aspect-ratio: 1;
-  height: 120%;
+  width: 100%;
 }
 main .container #robots {
   display: flex;
@@ -187,6 +202,7 @@ main .container #robots {
   align-items: center;
   flex-direction: column;
   height: 60vh;
+  width: 100%;
 }
 main .container #robots h1 {
   display: flex;
@@ -217,7 +233,7 @@ main .container #robots #bots-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 85%;
+  height: 100%;
   width: 100%;
 }
 main .container #robots #bots-container a {
@@ -252,8 +268,10 @@ main .container #robots #bots-container a h2 {
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
   font-weight: 500;
-  font-size: 40%;
+  font-size: 30%;
   padding: 8px;
+  overflow: hidden;
+  width: 80%;
 }
 main .container #robots #bots-container a h3 {
   font-weight: 300;
@@ -311,7 +329,7 @@ main .container #contact {
   background-image: url("../../public/assets/svg/checkered_bg.svg");
   background-attachment: fixed;
   height: 65vh;
-  width: 100vw;
+  width: 100%;
 }
 main .container #contact #join-us, main .container #contact #sponsors {
   display: flex;
@@ -360,9 +378,72 @@ main .container #footer {
   background-image: url("../../public/assets/fyre_banner.png");
   height: 50vh;
   justify-content: flex-start;
-  width: 100vw;
+  width: 100%;
 }
 main .container #footer #links {
   height: 100%;
   width: 30%;
-}/*# sourceMappingURL=style.css.map */
+}
+
+@media screen and (max-width: 800px) {
+  main .container #title div h1 {
+    font-size: 60%;
+  }
+  main .container #title div p {
+    font-size: 20%;
+  }
+  main .container #title img {
+    width: 0%;
+  }
+  main .container #robots {
+    height: 100vh;
+  }
+  main .container #robots h1 {
+    height: 10%;
+  }
+  main .container #robots #bots-container {
+    flex-direction: column;
+  }
+  main .container #robots #bots-container a {
+    height: 20%;
+    width: 100%;
+  }
+  main .container #robots #bots-container a h2 {
+    height: 30%;
+    margin: 5px;
+    width: 40%;
+  }
+  main .container #robots #bots-container a:hover {
+    width: 100%;
+  }
+  main .container #contact {
+    flex-direction: column;
+    height: 100vh;
+  }
+  main .container #contact #join-us, main .container #contact #sponsors {
+    font-size: 90%;
+    height: 50%;
+    width: 85%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  main .container #about-us #description {
+    width: 70%;
+  }
+  main .container #about-us #description p {
+    font-size: 22.5%;
+  }
+  main .container #about-us #photos {
+    width: 0%;
+  }
+  main .container #about-us #photos img {
+    height: 0%;
+  }
+}
+/*
+* {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+}
+*//*# sourceMappingURL=style.css.map */

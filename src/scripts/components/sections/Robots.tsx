@@ -2,6 +2,8 @@ import React from "react";
 
 import Robot from "../pieces/Robot"
 
+
+
 export default function Robots() {
     return (
         <div id="robots">
@@ -35,7 +37,7 @@ export default function Robots() {
                 />
 
                 <Robot 
-                    name="matchbox" 
+                    name="matchbox"
                     season={2022} 
                     description="Built to complete the Rapid React challenge, 
                     Matchbox was used in order to shoot balls into the center game 
@@ -44,7 +46,7 @@ export default function Robots() {
                 />
 
                 <Robot 
-                    name="ignis" 
+                    name="ignis"
                     season={2023} 
                     description="Built to complete the Charged Up challenge, 
                     Ignis was built in order to sustain the injury of such a contact-heavy
