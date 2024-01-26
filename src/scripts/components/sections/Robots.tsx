@@ -2,8 +2,6 @@ import React from "react";
 
 import Robot from "../pieces/Robot"
 
-
-
 export default function Robots() {
     return (
         <div id="robots">

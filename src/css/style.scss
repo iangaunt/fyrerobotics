@@ -386,6 +386,28 @@ main .container {
     }
 } 
 
+@media screen and (max-width: 1000px) {
+    main .container {
+        #about-us {
+            #description {
+                width: 70%;
+
+                p {
+                    font-size: 22.5%;
+                }
+            }
+
+            #photos {
+                width: 0%;
+
+                img {
+                    height: 0%;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 800px) {
     main .container {
         #title {
@@ -444,31 +466,49 @@ main .container {
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
     main .container {
-        #about-us {
-            #description {
-                width: 70%;
+        #full-header {
+            opacity: 0;
+        }
+
+        #title {
+            div {
+                h1 {
+                    font-size: 50%;
+                    padding: 5px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
 
                 p {
-                    font-size: 22.5%;
+                    font-size: 20%;
                 }
             }
+        }
 
-            #photos {
-                width: 0%;
-
-                img {
-                    height: 0%;
-                }
+        #about-us {
+            #description {
+                font-size: 80%;
             }
         }
 
         #robots {
+            #bots-container {
+                a p {
+                    font-size: 10%;
+                }
+            }
+        }
 
+        #contact {
+            #join-us, #sponsors {
+                font-size: 60%;
+            }
         }
     }
 }
+
 
 /*
 * {

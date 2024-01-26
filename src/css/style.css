@@ -385,6 +385,20 @@ main .container #footer #links {
   width: 30%;
 }
 
+@media screen and (max-width: 1000px) {
+  main .container #about-us #description {
+    width: 70%;
+  }
+  main .container #about-us #description p {
+    font-size: 22.5%;
+  }
+  main .container #about-us #photos {
+    width: 0%;
+  }
+  main .container #about-us #photos img {
+    height: 0%;
+  }
+}
 @media screen and (max-width: 800px) {
   main .container #title div h1 {
     font-size: 60%;
@@ -426,18 +440,27 @@ main .container #footer #links {
     width: 85%;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
+  main .container #full-header {
+    opacity: 0;
+  }
+  main .container #title div h1 {
+    font-size: 50%;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  main .container #title div p {
+    font-size: 20%;
+  }
   main .container #about-us #description {
-    width: 70%;
+    font-size: 80%;
   }
-  main .container #about-us #description p {
-    font-size: 22.5%;
+  main .container #robots #bots-container a p {
+    font-size: 10%;
   }
-  main .container #about-us #photos {
-    width: 0%;
-  }
-  main .container #about-us #photos img {
-    height: 0%;
+  main .container #contact #join-us, main .container #contact #sponsors {
+    font-size: 60%;
   }
 }
 /*
